@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es"> <!--cambiar el idima de "en" a "es"-->
+<!-- [los comentarios se escriben así] -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--la etiqueta style es html pero la propiedad color es css por eso se usa css externo-->
+    <!--
+    <style>
+        h1{
+            color:brown; 
+        } 
+    </style>
+    -->
+    <!--link es la etiqueta, rel es el atributo y stylesheet es el valor del atributo -->
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Petronila Sweet Boutique</title> <!--es el título q aparece en la pestaña del navegador-->
+</head>
+
+<body>
+    <header><!--no se ve, es un contenedor, indica al navegador q lo q haya acá va a estar en la parte superior, contiene el logo y la barra de navegación-->
+        <table>
+            <tr>
+                <td>
+                    <img src="./img/logotipo-v1.jpg" width="50%" alt="logotipo de la pastelería que muestra el dibujo de una torta">
+                </td>
+
+                <td>
+                    <h1>Petronila Sweet Boutique</h1> <!--encabezado, se recomienda q solo haya un h1, pone el mayor tamaño de texto, va de jerarquía del h1 al h6 q es el mas chico-->
+                     <!--
+                    <h1 style="color: blueviolet;">Petronila Sweet Boutique</h1>
+                    -->
+                </td>
+            </tr>
+        </table>
+
+        <hr> <!--línea divisoria-->
+        <h2>Pastelería artesanal</h2> <!--subtítulo-->
+        <h4>Resolvemos tus antojos dulces</h4>
+
+        <nav> <!--creamos listas, hay 3 tipos
+            <ul> ol: lista ordenada// ul: unorder list (lista desordenada)
+                <li><a href="./productos.html">Productos</a></li>
+                li: list item// a: es para crear link, la barra diagonal abre un pop up con los archivos creados y eljo, en este caso productos, luego eliminar la barra diagonal o poner./ para referenciar el directorio raíz
+                <li><a href="./especiales.html">Especiales</a></li>
+                <li><a href="./recetas.html">Recetas</a></li>
+                <li><a href="./contacto.html">Contacto</a> </li>
+                <li><a href="./ubicacion.html">Ubicación</a></li>
+            </ul>
+            -->
+            
+            <ul class="nav-list">
+                <li><a href="./productos.html">Productos</a></li>
+                <li><a href="./especiales.html">Especiales</a></li>
+                <li><a href="./recetas.html">Recetas</a></li>
+                <li><a href="./contacto.html">Contacto</a> </li>
+                <li><a href="./ubicacion.html">Ubicación</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <div class="recuadro">
+
+
+
+    </div>
+
+    <main> <!--contenido principal-->
+        <table> <!--mostrar en forma de tablas, se le puede agregar un borde: border="1" por ej.-->
+            <tr> <!--table row (fila)-->
+                <td width="50%" ><!--td es table data-->
+                    <p>Web de pastelería artesanal</p> <!--parrafo-->
+                    <p>Este es un párrafo de introducción sobre el proyecto. Aquí se puede usar: <strong>negrita</strong>, <em>cursiva</em>, y <s>tachado</s></p>
+                    <!--clase: <p class="pcolor"> en este caso el class y el id van a funcioanr igual-->
+                    <p id="pcolor">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam error nulla totam dicta alias doloribus vel, quasi repellendus atque eaque. Ut accusantium rerum saepe alias quasi voluptate inventore, aliquam non?</p>
+                </td>
+                <td>
+                    <img src="./img/productos-varios.jpg" width="40%" alt="Imagen que muestra un collage de fotos de distintos productos: tortas, brownie con merengue y chocolatines, parte de casita de jengibre, tarta de chocolate, entremet de chocolate blanco con relleno de frambuesa y chocolate con leche sobre base sablé de chocolate">
+                </td>
+            </tr>
+        </table>
+
+
+
+        <section>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam error nulla totam dicta alias doloribus
+            vel, quasi repellendus atque eaque. Ut accusantium rerum saepe alias quasi voluptate inventore, aliquam
+            non?</p> <!--párrafo predeterminado de prueba, escribir Lorem y enter-->
+        </section>
+
+    </main>
+
+
+    <footer> <!--enlaces a rrss, mapa, contacto, etc-->
+        <hr>
+        <p>Información de contacto: rrss, mail, dirección, whatsapp.</p>        
+        <p><a href="mailto:petronila.sweetboutique@gmail.com">Email: petronila.sweetboutique@gmail.com</a></p>
+        <p>Desarrollado por: Maru T.</p>
+        <p>Proyecto educativo sin fines comerciales, para el curso de Front End - Talento Tech 2025</p>
+    </footer>
+
+</body>
+
+</html>

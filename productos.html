@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - Petronila Sweet Boutique</title>
+</head>
+
+<body>
+    <header> 
+        <table>
+            <tr>
+                <td>
+                    <img src="./img/logotipo-v1.jpg" width="50%" alt="logotipo de la pastelería que muestra el dibujo de una torta">
+                </td>
+
+                <td>
+                    <h1>Petronila Sweet Boutique</h1> <!--encabezado, se recomienda q solo haya un h1, pone el mayor tamaño de texto, va de jerarquía del h1 al h6 q es el mas chico-->
+                </td>
+            </tr>
+        </table>
+
+        <h2>Productos</h2> 
+        <hr>
+        <h4>Resolvemos tus antojos dulces</h4>
+
+        <nav> 
+            <ul> 
+                <!--comportamiento en bloque, ocupa todo el ancho de la pagina, queda en blanco--> 
+                <li><a href="./productos.html">Productos</a></li>  
+                <li><a href="./especiales.html">Especiales</a></li>
+                <li><a href="./recetas.html">Recetas</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+                <li><a href="./ubicacion.html">Ubicación</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+        <section>
+            <!--creamos imagen. Acá podemos hacer un comportamiento en línea. Si pongo acá las dos (o más) imágenes pasan a estar una al lado de la otra-->
+
+            <!--imagen web cookies red velvet-->
+            <img src="https://acdn-us.mitiendanube.com/stores/095/249/products/cookies-redvelvet1-446256589f5d0eb0c216591106575298-320-0.webp" width="13%" alt="Cookies red velvet con frutos secos y chispas de chocolate">
+
+            <!--imagen web cookies chocolate-->
+            <img src="https://acdn-us.mitiendanube.com/stores/095/249/products/cookies-chocolate1-2a424415204e4d36ce16587757665614-320-0.webp" width="13%" alt=" Imagen que muestra cookies de chocolate">
+
+            <!--imagen "propia" de mi carpeta de archivos (usé una captura de foto de una web a modo de ejemplo) -->
+            <img src="./img/muffin-arandanos.jpg" width="12.9%" alt="La imagen muestra un muffin de limón y arándanos" > <!--no se ve el texto alt (alternativo), pero google lo tiene en cuenta, es por si se rompe la imagen o para gente con discapacidad-->
+
+        </section>
+
+        <!--ejemplo de inserción de audio:-->
+        <section>
+            <audio controls>
+                <source src="audio.mp3" type="audio/mpeg">
+                Tu navegador no soporta la reproducción de audio.
+              </audio>
+        </section>
+
+        <!-- EJEMPLO DE INSERCION DE IMAGEN WEB:
+        <section>
+            <img src="https://acdn-us.mitiendanube.com/stores/095/249/products/cookies-chocolate1-2a424415204e4d36ce16587757665614-320-0.webp" width="20%">
+        </section>
+        -->
+      
+
+
+        <section>
+            <video controls width="600" height="400">
+                <source src="./video/muffins_frozen2.mp4" type="video/mp4"> <!--type indica qué tipo de codec se necesita para la reproducción. Si no funciona usar Online-convert y se soluciona el tema del codec (como me pasó en este caso)-->
+                Tu navegador no soporta la reproducción de video.
+
+                <track src="./video/subtitulos_muffins_frozen.vtt" kind="subtitles" srclang="es" label="Español">
+
+            </video>
+            
+        </section>
+
+
+
+        
+        
+        <a href="https://www.mauricioasta.com/">Tienda Mauricio Asta</a> <!-- ruta absoluta-->
+        
+    </main> 
+
+    <a href="./index.html">Volver</a> <!--ruta relativa-->
+
+    <footer> <!--enlaces a rrss, mapa, contacto, etc-->
+        <hr>
+        <p>Información de contacto: rrss, mail, dirección, whatsapp.</p>        
+        <p><a href="mailto:petronila.sweetboutique@gmail.com">Email: petronila.sweetboutique@gmail.com</a></p>
+        <p>Desarrollado por: Maru T.</p>
+        <p>Proyecto educativo sin fines comerciales, para el curso de Front End - Talento Tech 2025</p>
+    </footer>
+
+
+
+</body>
+</html>

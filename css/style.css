@@ -1,0 +1,118 @@
+h1 {
+    /*rgb es red green and blue*/
+    /* lr voy a sacar estos atributos para q quede mejor, eran a modo práctico 
+    color: rgba(165, 42, 128, 0.74) !important;
+    background-color: rgb(252, 210, 155);*/
+        /* tamaño absoluto
+    font-size: 50px;
+    */
+    /* tamaño relativo de medidas flexibles*/
+    font-size: 50px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+/* usé este color en h1 para remarcar q puedo poner importan si quisiera algun atributo de mas arriba, sino siempre tomará el último de la cascada
+h1{
+    color: chartreuse;
+}*/
+
+/*cdo pongo una etiqueta aplican los atributos a todas las etiquetas, para selleccionar una sol debo ponerle la clase en el html */
+
+/*p{
+    color: brown;
+}*/
+
+/* el punto selecciona la clase
+.pcolor {
+    color: rgb(85, 173, 13);
+}*/
+
+/* el hashtag selecciona el id*/
+
+#pcolor {
+    color: rgb(27, 173, 47);
+
+}
+
+html {
+    font-size: 16px; /* 1rem = 16px */
+}
+
+main {
+    background-image: url(/img/fondo-rayas-watercolor.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header {
+    background-color: rgb(248, 204, 234);
+}
+
+
+
+
+
+
+.nav-list {
+    list-style: none; /* quita viñetas*/
+    padding: 0; /* elimina espacio interno*/
+    background-color: #c77fb5; /* color de fondo*/
+}
+
+.nav-list li {
+    display: inline-block; /* muestra los elementos <li> en linea en vez de columna*/
+    margin-right: 15px; /* agrega separación entre los elementos*/
+}
+
+.nav-list a {
+    padding: 10px;
+    position: relative; /*necesario para colocar el subrayado*/ 
+    text-decoration: none; /* elimina el subrayado de los enlaces <a> */
+    color: white; /* color de los enlaces*/
+    font-weight: bold; /* negrita */
+    display: inline-block; /* permite q el efecto se vea correctamente*/
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out; /* suaviza el efecto*/
+}
+
+/*Subrayado inicial oculto*/
+.nav-list a::after {
+    /*content: ""; /* crea un elemento vacío*/
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%; /*comienza sin ancho*/
+    /*height: 2px; grosor del subrayado*/
+    /*background-color: #ffcc00; /*color del subrayado*/
+    transition: width 0.3s ease-in-out; /*animación de crecimiento*/
+}
+
+/*efecto al pasar el mouse*/
+.nav-list a:hover::after {
+    width: 100%; /*se expande completamente*/
+}
+
+.nav-list a:hover {
+    transform: scale(1.2); /* aumenta el tamaño en un 20%*/
+    color: #ffcc00; /* cambia el color*/
+}
+
+
+/*
+.recuadro {
+
+    color: rgb(0, 47, 255);
+    font-size: 3em; 
+
+    width: 50%; dimensión en ancho - px es una unidad absoluta
+    height: 150px;  dimensión del alto
+    background-color: #4f8a83;
+    border: 3px solid green;
+} 
+*/
+
+
+
+
+footer {
+    background-color: rgb(248, 204, 234);
+}
