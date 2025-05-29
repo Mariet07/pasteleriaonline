@@ -37,8 +37,8 @@ html {
     font-size: 16px; /* 1rem = 16px */
 }
 
-main {
-    background-image: url(/img/fondo-rayas-watercolor.png);
+body {
+    background-image: url("./img/fondo-v1.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
