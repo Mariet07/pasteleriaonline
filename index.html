@@ -1,83 +1,122 @@
 <!DOCTYPE html>
-<html lang="es"> <!--cambiar el idima de "en" a "es"-->
-<!-- [los comentarios se escriben así] -->
+<html lang="es"> <!--cambiar el idioma de "en" a "es"-->
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--la etiqueta style es html pero la propiedad color es css por eso se usa css externo-->
-    <!--
-    <style>
-        h1{
-            color:brown; 
-        } 
-    </style>
-    -->
-    <!--link es la etiqueta, rel es el atributo y stylesheet es el valor del atributo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+HU:wght@100..400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Petronila Sweet Boutique</title> <!--es el título q aparece en la pestaña del navegador-->
+    <title>Petronila Sweet Boutique</title>
 </head>
 
 <body>
-    <header><!--no se ve, es un contenedor, indica al navegador q lo q haya acá va a estar en la parte superior, contiene el logo y la barra de navegación-->
-        <table>
-            <tr>
-                <td>
-                    <img src="./img/logotipo-v1.jpg" width="50%" alt="logotipo de la pastelería que muestra el dibujo de una torta">
-                </td>
+    <header>
+        <div class="logo">
+            <img src="./img/logotipo-sinfondo.png"
+                alt="logo de la pastelería, una torta con drip y frutos rojos en estilo dibujo vintage" width="85%">
+            <!--widht en relación al contenedor-->
+        </div>
 
-                <td>
-                    <h1>Petronila Sweet Boutique</h1> <!--encabezado, se recomienda q solo haya un h1, pone el mayor tamaño de texto, va de jerarquía del h1 al h6 q es el mas chico-->
-                     <!--
-                    <h1 style="color: blueviolet;">Petronila Sweet Boutique</h1>
-                    -->
-                </td>
-            </tr>
-        </table>
+        <div class="titulo">
+            <h1 class="h1-clase">Petronila Sweet Boutique</h1>
+            <h5>Endulzando momentos</h5>
+        </div>
 
-        <hr> <!--línea divisoria-->
-        <h2>Pastelería artesanal</h2> <!--subtítulo-->
-        <h4>Resolvemos tus antojos dulces</h4>
+        <div class="nav">
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="./index.html"><i class="fa-solid fa-house"></i></a></li>
+                    <li><a href="./productos.html">Productos</a></li>
+                    <li><a href="./especiales.html">Especiales</a></li>
+                    <li><a href="./recetas.html">Recetas</a></li>
+                    <li><a href="./contacto.html">Contacto</a> </li>
+                    <li><a href="./ubicacion.html">Ubicación</a></li>
+                    <li><a href="./reseñas.html">Reseñas</a></li>
 
-        <nav> <!--creamos listas, hay 3 tipos
-            <ul> ol: lista ordenada// ul: unorder list (lista desordenada)
-                <li><a href="./productos.html">Productos</a></li>
-                li: list item// a: es para crear link, la barra diagonal abre un pop up con los archivos creados y eljo, en este caso productos, luego eliminar la barra diagonal o poner./ para referenciar el directorio raíz
-                <li><a href="./especiales.html">Especiales</a></li>
-                <li><a href="./recetas.html">Recetas</a></li>
-                <li><a href="./contacto.html">Contacto</a> </li>
-                <li><a href="./ubicacion.html">Ubicación</a></li>
-            </ul>
-            -->
-            
-            <ul class="nav-list">
-                <li><a href="./productos.html">Productos</a></li>
-                <li><a href="./especiales.html">Especiales</a></li>
-                <li><a href="./recetas.html">Recetas</a></li>
-                <li><a href="./contacto.html">Contacto</a> </li>
-                <li><a href="./ubicacion.html">Ubicación</a></li>
-            </ul>
-        </nav>
+                </ul>
+            </nav>
+        </div>
 
     </header>
 
+    <!-- bootstrap nav-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu"> <!--menú desplegable-->
+                            <li><a class="dropdown-item" href="#">Pascua</a></li>
+                            <li><a class="dropdown-item" href="#">Navidad</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Fechas especiales</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
     <div class="recuadro">
-
-
 
     </div>
 
     <main> <!--contenido principal-->
         <table> <!--mostrar en forma de tablas, se le puede agregar un borde: border="1" por ej.-->
             <tr> <!--table row (fila)-->
-                <td width="50%" ><!--td es table data-->
-                    <p>Web de pastelería artesanal</p> <!--parrafo-->
+                <td width="50%"><!--td es table data-->
+                    <!-- <p>Web de pastelería artesanal</p> parrafo-->
+                    <!--
+                    <p>¡Bienvenidos a un mundo de dulces sabores, creadores de hermosos momentos!</p>
+                    <p>¡Bienvenidos a un mundo de dulces sabores, compañía de hermosos momentos!</p>
+                    -->
+                    <p><strong>¡Bienvenidos a un espacio pensado para <em>endulzar tus mejores recuerdos</em>!</strong>
+                    </p>
+                    <!--
                     <p>Este es un párrafo de introducción sobre el proyecto. Aquí se puede usar: <strong>negrita</strong>, <em>cursiva</em>, y <s>tachado</s></p>
-                    <!--clase: <p class="pcolor"> en este caso el class y el id van a funcioanr igual-->
-                    <p id="pcolor">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam error nulla totam dicta alias doloribus vel, quasi repellendus atque eaque. Ut accusantium rerum saepe alias quasi voluptate inventore, aliquam non?</p>
+                    clase: <p class="pcolor"> en este caso el class y el id: <p id="pcolor"> van a funcionar igual-->
+                    <p>Hola, soy Maru, y la pastelería siempre ha sido parte de mi vida. Desde pequeña, experimentaba
+                        con recetas sacadas de revistas, radio y televisión, aprendiendo de mi mamá y sus recetarios,
+                        siendo mi papá "víctima" de probar mis primeros intentos de masitas. Con el tiempo, mi
+                        pasión por lo dulce solo creció. En 2017 decidí volcar todo lo aprendido en la escuela de
+                        gastronomía y el resultado fue mi primer gran mesa dulce, el nacimiento de este proyecto… ¡y
+                        desde entonces no he parado!</p>
+
                 </td>
                 <td>
-                    <img src="./img/productos-varios.jpg" width="40%" alt="Imagen que muestra un collage de fotos de distintos productos: tortas, brownie con merengue y chocolatines, parte de casita de jengibre, tarta de chocolate, entremet de chocolate blanco con relleno de frambuesa y chocolate con leche sobre base sablé de chocolate">
+                    <img src="./img/productos-varios.jpg" width="40%"
+                        alt="Imagen que muestra un collage de fotos de distintos productos: tortas, brownie con merengue y chocolatines, parte de casita de jengibre, tarta de chocolate, entremet de chocolate blanco con relleno de frambuesa y chocolate con leche sobre base sablé de chocolate">
                 </td>
             </tr>
         </table>
@@ -85,21 +124,38 @@
 
 
         <section>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam error nulla totam dicta alias doloribus
-            vel, quasi repellendus atque eaque. Ut accusantium rerum saepe alias quasi voluptate inventore, aliquam
-            non?</p> <!--párrafo predeterminado de prueba, escribir Lorem y enter-->
+            <p>Aquí encontrarás productos hechos con dedicación y especialmente para vos. Cada receta está pensada para
+                lograr un equilibrio perfecto entre sabores, texturas y dulzor, combinando ingredientes nobles,
+                tradición y creatividad para sorprenderte en cada bocado.</p>
         </section>
+        <hr>
 
     </main>
 
 
-    <footer> <!--enlaces a rrss, mapa, contacto, etc-->
+
+    <footer>
         <hr>
-        <p>Información de contacto: rrss, mail, dirección, whatsapp.</p>        
-        <p><a href="mailto:petronila.sweetboutique@gmail.com">Email: petronila.sweetboutique@gmail.com</a></p>
-        <p>Desarrollado por: Maru T.</p>
-        <p>Proyecto educativo sin fines comerciales, para el curso de Front End - Talento Tech 2025</p>
+        <p class="pfooter"><strong>Endulzando tus momentos felices</strong></p>
+        <p class="pfooter">Desarrollado por: Maru T.</p>
+        <p class="pfooter">Proyecto educativo sin fines comerciales para el curso de Front End - Talento Tech 2025</p>
+        <div class="conticonos">
+            <a href="mailto:petronila.sweetboutique@gmail.com" target="_blank"><i
+                    class="fa-regular fa-envelope"></i></a>
+            <!--iconos de rrss-->
+            <a href="https://www.facebook.com/PetronilaSweetBoutique" target="_blank" rel="noopener noreferrer"><i
+                    class="fa-brands fa-facebook"></i></a>
+            <a href="https://wa.me/5491120816754" target="_blank"><i class="fa-brands fa-whatsapp"
+                    rel="noopener noreferrer"></i></a>
+            <a href="https://www.instagram.com/petronila_sweetboutique/" target="_blank"><i
+                    class="fa-brands fa-instagram" rel="noopener noreferrer"></i></a>
+        </div>
     </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous"></script>
 
 </body>
 

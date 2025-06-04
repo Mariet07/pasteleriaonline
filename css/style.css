@@ -1,62 +1,103 @@
-h1 {
-    /*rgb es red green and blue*/
-    /* lr voy a sacar estos atributos para q quede mejor, eran a modo práctico 
-    color: rgba(165, 42, 128, 0.74) !important;
-    background-color: rgb(252, 210, 155);*/
-        /* tamaño absoluto
-    font-size: 50px;
-    */
-    /* tamaño relativo de medidas flexibles*/
-    font-size: 50px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-/* usé este color en h1 para remarcar q puedo poner importan si quisiera algun atributo de mas arriba, sino siempre tomará el último de la cascada
-h1{
-    color: chartreuse;
-}*/
-
-/*cdo pongo una etiqueta aplican los atributos a todas las etiquetas, para selleccionar una sol debo ponerle la clase en el html */
-
-/*p{
-    color: brown;
-}*/
-
-/* el punto selecciona la clase
-.pcolor {
-    color: rgb(85, 173, 13);
-}*/
-
-/* el hashtag selecciona el id*/
-
-#pcolor {
-    color: rgb(27, 173, 47);
-
-}
-
 html {
-    font-size: 16px; /* 1rem = 16px */
+    scroll-behavior: smooth;
 }
 
 body {
     background-image: url("https://mariet07.github.io/pasteleriaonline/img/fondo.png");
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
+    /*background-attachment: fixed;*/
+}
+
+.fondoreseñas {
+    background-image: url("../img/confeti.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 header {
-    background-color: rgb(248, 204, 234);
+    display: flex;
+    /*flex-direction: row;*/
+    flex-wrap: wrap;/* Permite que los elementos bajen si no caben en la misma linea*/
+    justify-content: space-between;
+    align-items: center; /*centra verticalmente*/
+    background-color: rgb(244, 212, 250); /*rgb(248, 204, 234) rosa*/
+    position: sticky;
+    top: 0;
+    box-shadow: 0px 0px 20px #663233; /*eje x, eje y, blur*/
+    transition: transform 3s ease-in-out; /*para ver el efecto poner la clase anim en el header, no lo puse xq no me gusta como queda, puede servir para los productos*/
+    z-index: 10;
+    padding: 10px;
+}
+
+.logo {
+    flex: 1; /*ocupa espacio proporcionalmente*/
+}
+
+.titulo {
+    flex: 2; /*se ajusta más ancho q los otros elementos*/
+    text-align: center;
+}
+
+.anim {
+    transition: transform 0.5s ease-in-out;
+}
+
+.anim:hover {
+    transform: scale(1.15);
+}
+
+h1 {
+    font-size: 50px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #663233;
+}
+
+h2 {
+    color: #947070;
+}
+
+h5 {
+    color: #ac9b5a; /*#a0966e*/
+}
+
+a {
+    text-decoration: none;
+    color: #663233;
 }
 
 
 
 
+.imglogo {
+    margin-bottom: 10px;
+}
 
+nav {
+    font-family: "Playwrite HU", cursive; /*fuente agregada de google*/
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; /*alineación a la derecha*/
+}
+
+.nav {
+   display: flex;
+   justify-content: center;
+   
+  
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .nav-list {
     list-style: none; /* quita viñetas*/
     padding: 0; /* elimina espacio interno*/
     background-color: #c77fb5; /* color de fondo*/
+    
 }
 
 .nav-list li {
@@ -66,53 +107,189 @@ header {
 
 .nav-list a {
     padding: 10px;
-    position: relative; /*necesario para colocar el subrayado*/ 
     text-decoration: none; /* elimina el subrayado de los enlaces <a> */
-    color: white; /* color de los enlaces*/
+    color: whitesmoke; /* color de los enlaces*/
     font-weight: bold; /* negrita */
     display: inline-block; /* permite q el efecto se vea correctamente*/
     transition: transform 0.3s ease-in-out, color 0.3s ease-in-out; /* suaviza el efecto*/
 }
-
-/*Subrayado inicial oculto*/
-.nav-list a::after {
-    /*content: ""; /* crea un elemento vacío*/
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0%; /*comienza sin ancho*/
-    /*height: 2px; grosor del subrayado*/
-    /*background-color: #ffcc00; /*color del subrayado*/
-    transition: width 0.3s ease-in-out; /*animación de crecimiento*/
+.nav-list  {
+    padding: 10px;
+    text-decoration: none;
+    color: whitesmoke;
+    font-weight: bold;
+    display: inline-block;
+    transition: transform 0.3s;
 }
 
-/*efecto al pasar el mouse*/
-.nav-list a:hover::after {
+.nav-list a:hover::after { /*efecto al pasar el mouse*/
     width: 100%; /*se expande completamente*/
 }
 
 .nav-list a:hover {
     transform: scale(1.2); /* aumenta el tamaño en un 20%*/
-    color: #ffcc00; /* cambia el color*/
+    color: #663233; /* cambia el color*/
 }
 
 
-/*
-.recuadro {
+.contenedor {
+    display: flex;
+    justify-content: space-between; /*center, flex start, flex end, space around, space between, space center*/
+    flex-wrap: wrap;
+    align-items: stretch; /*flex end puede servir para el footer, tb esta flex start, baseline*/
+    border: 5px solid black;
+    height: 300px; /* auto */
+    .item {
+    border: 3px solid rgb(209, 12, 12);
+    height: auto;
+    width: auto;
+}
+}
 
-    color: rgb(0, 47, 255);
-    font-size: 3em; 
-
-    width: 50%; dimensión en ancho - px es una unidad absoluta
-    height: 150px;  dimensión del alto
-    background-color: #4f8a83;
-    border: 3px solid green;
-} 
-*/
+.item {
+    border: 3px solid rgb(209, 12, 12);
+    height: 150px;
+    width: 100px;
+}
 
 
+#piepagina {
+  color: rgb(165, 63, 165);
+}
 
 
 footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
     background-color: rgb(248, 204, 234);
+    padding: 20px;
+    box-shadow: 0px 0px 20px #663233; /*eje x, eje y, blur*/
+    width: 100%;
+
+}
+
+.pfooter {
+    color: #663233;
+    color: #947070;
+    
+}
+
+/*iconos rrss*/
+.conticonos {
+    display: flex; /*contenedor padre q contiene los items flexibles*/
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    gap: 15px; /*agrega espacio entre los íconos*/
+    
+   
+}
+
+.fa-envelope {
+   
+    font-size: 30px;
+    color: #663233; /* Color oscuro neutro para correo */
+    transition: transform 0.3s ease;
+}
+
+.fa-envelope:hover {
+    transform: scale(1.2);
+    color: #ff6b6b; /* Rojo sutil al hacer hover */
+}
+
+
+.fa-facebook {
+    
+    font-size: 30px;
+    color: #663233; /* color de la web de peggy proschen*/
+    transition: transform 0.3s ease;
+}
+
+.fa-facebook:hover {
+    transform: scale(1.2);
+    color: #1877F2; /* Color azul de Facebook */
+}
+
+.fa-whatsapp {
+    font-size: 30px;
+    color: #663233;
+    transition: transform 0.3s ease; /* Agrega una animación suave */
+}
+
+.fa-whatsapp:hover {
+    transform: scale(1.2);
+    color: #1ebe56; /* Verde más intenso al hacer hover (#25D366 es el Verde de WhatsApp)*/
+}
+
+.fa-instagram {
+    
+    font-size: 30px; /* Ajusta el tamaño del ícono */
+    color: #663233;
+    transition: transform 0.3s ease; /* Agrega una animación suave */
+}
+
+.fa-instagram:hover {
+    transform: scale(1.2); /* Hace que el ícono aumente un 10% al pasar el cursor */
+    color: #E4405F; /* Cambia el color al típico rojo de Instagram */
+}
+
+
+
+.grilla {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /*fr: fracción o fragmento*/
+    grid-template-rows: 1fr 1fr;
+
+}
+
+.itemgrilla {
+    display: flex;
+    grid-column: 2 / 3;
+    grid-row: 3 / 4 ;
+}
+
+
+.gridreseñas {
+    display: grid;    
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 50px; /* Espacio uniforme entre filas y columnas */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+}
+
+.gridreseñas h3 {
+    display: flex;
+    grid-column: 1 / 3 ; /* posición entre líneas del grid*/
+    grid-row: 1 / 2 ;
+    color: rgb(228, 64, 95) ;
+
+}
+.estrella {
+    color: #dfbd38;     
+    font-size: 32px;
+    border: none;
+    background: transparent;
+    display: inline-block;
+}
+
+.gridreseñas p {
+    color: #663233;
+    font-weight: lighter;
+}
+
+
+
+.itemreseña {
+    border: 2px solid #663233;
+    padding: 15px; /* espaciado interno */
+    border-radius: 10px;
+    background-color: #f4d4fa;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4); /* Sombra suave */
+
 }
