@@ -66,9 +66,6 @@ a {
     color: #663233;
 }
 
-
-
-
 .imglogo {
     margin-bottom: 10px;
 }
@@ -153,6 +150,53 @@ nav ul {
 }
 
 
+.botones_productos {
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+    margin: 3%;
+    padding: 1%;
+    text-align: center;
+    
+}
+
+.producto_flex {
+    display: flex;
+    justify-content: space-evenly; /*distribución de elementos*/
+    flex-wrap: wrap;
+    gap: 20px; 
+    padding: 20px;
+}
+
+.producto_flex h3 {
+    color: #ff6b6b;
+}
+
+
+.item_flex {
+    min-width: 250px;
+    max-width: 300px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5%;
+    padding: 15px;
+}
+
+.item_flex:hover {
+    transform: translateY(-5px);
+    transition: transform 0.5s ease-in-out;
+    box-shadow: 0px 0px 3px grey;
+}
+
+
+
+
+
+
+
+
+
 #piepagina {
   color: rgb(165, 63, 165);
 }
@@ -235,6 +279,74 @@ footer {
     color: #E4405F; /* Cambia el color al típico rojo de Instagram */
 }
 
+.contacto-container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contacto-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* formulario más ancho*/
+    gap: 200px; /*espacio entre elementos*/
+    align-items: center;
+}
+.contacto-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: auto;
+    gap: 5px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    align-self: start;
+    color: #663233;
+}
+
+.botones-form {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+
+.instagram {
+    max-width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 80px;
+}
+/* Ajuste para móviles*/
+@media screen and (max-width: 768px) {
+    .contacto-container {
+        align-items: center;
+        /*width: 95%;*/
+    }
+    .contacto-grid{
+        grid-template-columns: 1fr; /*cambia la disposición en móviles*/
+    }
+    .contacto-form input,
+    .contacto-form textarea {
+        width: 100%;
+        max-width: 400px;
+        margin-bottom: 20px;
+    }
+    .botones-form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
+    }
+    .instagram {
+        width: 100%;
+        max-width: 400px;
+        margin: auto;
+    }
+}
+
 
 
 .grilla {
@@ -291,5 +403,10 @@ footer {
     border-radius: 10px;
     background-color: #f4d4fa;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4); /* Sombra suave */
+
+}
+
+
+@media () {
 
 }
