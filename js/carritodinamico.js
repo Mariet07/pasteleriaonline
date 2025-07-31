@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { id: 2, nombre: 'Alfajores de Maicena', precio: 10000, imagen: './img/alfajormaizena.jpg' },
         { id: 3, nombre: 'Drip Cake', precio: 55000, imagen: './img/dripcakerosa.jpg' },
         { id: 4, nombre: 'Brownie con ddl', precio: 25000, imagen: './img/minibrownie.jpg' },
-        { id: 4, nombre: 'Cupcakes', precio: 30000, imagen: './img/cupcakes916.jpeg' }
+        { id: 5, nombre: 'Cupcakes', precio: 30000, imagen: './img/cupcakes916.jpeg' }
     ];
 
     let carrito = [];
